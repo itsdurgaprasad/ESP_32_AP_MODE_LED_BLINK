@@ -9,6 +9,7 @@ int bulbPin = 2; // GPIO pin where LED (or relay for bulb) is connected
 WiFiServer server(80); // Create a web server on port 80
 
 void setup() {
+    Serial.printf("Bulb Control\n");
     Serial.begin(115200);  // Start serial communication for debugging
     pinMode(bulbPin, OUTPUT); // Set bulb pin as OUTPUT
     digitalWrite(bulbPin, HIGH); // Bulb initially ON
